@@ -7,7 +7,7 @@ CREATE TABLE albums (
     artist VARCHAR(128) NOT NULL,
     name VARCHAR(128) NOT NULL,
     release_date SMALLINT UNSIGNED,
-    sales FLOAT(6, 2) NOT NULL,
     genre VARCHAR(128) NOT NULL,
+    sales FLOAT(6, 2) NOT NULL,
     PRIMARY KEY (id)
 );
