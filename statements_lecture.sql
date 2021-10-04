@@ -48,14 +48,19 @@ CREATE TABLE quotes (
 # # ================================= SELECT STATEMENTS
 #
 # # Select All
-#
+# SELECT * FROM albums;
+
 # # Select Specific Columns
-#
+# SELECT name, id, artist FROM albums;
+
 # # Where clause
+SELECT id, name, artist FROM albums
+WHERE name LIKE '%Abbey%';
 #
 # # Operators
 #
 # # Miscellaneous Output
+SELECT 'Some kinda outpput' AS 'Column Name';
 #
 # -- ================================= UPDATE STATEMENTS (UPDATE)
 #
