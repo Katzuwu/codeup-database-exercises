@@ -77,31 +77,32 @@ SELECT 'Some kinda outpput' AS 'Column Name';
 # -- description
 # -- bestseller_weeks
 #
-# USE books_db;
-#
-# DROP TABLE IF EXISTS books;
-#
-# CREATE TABLE IF NOT EXISTS books (
-#                                      id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-#                                      title VARCHAR(255) NOT NULL,
-#                                      author VARCHAR(100) NOT NULL DEFAULT 'Unknown',
-#                                      date_published DATE NOT NULL,
-#                                      description TEXT,
-#                                      bestseller_weeks INT UNSIGNED NOT NULL DEFAULT 0,
-#                                      PRIMARY KEY (id)
-# );
+USE codeup_test_db;
+
+DROP TABLE IF EXISTS books;
+
+CREATE TABLE IF NOT EXISTS books (
+                                     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+                                     title VARCHAR(255) NOT NULL,
+                                     author VARCHAR(100) NOT NULL DEFAULT 'Unknown',
+                                     date_published DATE NOT NULL,
+                                     description TEXT,
+                                     bestseller_weeks INT UNSIGNED NOT NULL DEFAULT 0,
+                                     PRIMARY KEY (id)
+);
 #
 # -- Create books seeder file
 #
-# -- "To Kill a Mockingbird", "Harper Lee", "1960-07-11", "This is a book about birds.", 0
-# -- "The Great Gatsby", "F. Scott Fitzgerald", "1925-04-10", "This is a book about a great thing.", 10
-# -- "Harry Potter and the Sorcerer`s Stone", "J.K. Rowling", "1997-06-26", "This is a book about wizards.", 70
-# -- "The Hobbit", "J.R.R. Tolkien", "1937-07-21", "This is a book about hobbits.", 5
-#
-# -- Update values **Test alterations first with SELECT statements**
-# -- Updating a single record
-# -- (a record with an ID of 2 should have an author of 'bob')
-#
+INSERT INTO books(title, author, date_published, description, bestseller_weeks) VALUES
+('To Kill a Mockingbird', 'Harper Lee', '1960-07-11', 'This is a book about birds.', 0),
+('The Great Gatsby', 'F. Scott Fitzgerald', '1925-04-10', 'This is a book about a great thing.', 10),
+('Harry Potter and the Sorcerer`s Stone', 'J.K. Rowling', '1997-06-26', 'This is a book about wizards.', 70),
+('The Hobbit', 'J.R.R. Tolkien', '1937-07-21', 'This is a book about hobbits.', 5);
+
+-- Update values **Test alterations first with SELECT statements**
+-- Updating a single record
+-- (a record with an ID of 2 should have an author of 'bob')
+
 # SELECT * FROM books
 # WHERE id = 2;
 #
