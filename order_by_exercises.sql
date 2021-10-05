@@ -14,11 +14,11 @@ where first_name in ('Irena', 'Vidya', 'Maya')
 order by last_name, first_name;
 # Update your queries for employees with 'E' in their last name to sort the results by their employee number. Your results should not change!
 select * from employees
-where last_name LIKE 'E%'
+where last_name LIKE '%e%'
 order by emp_no;
 # Now reverse the sort order for both queries and compare results.
 select * from employees
-where last_name LIKE 'E%'
+where last_name LIKE '%e%'
 order by emp_no desc;
 
 
